@@ -14,27 +14,18 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
-int BitValue(int n)
-{
-    return (1 << n); 
-}
-
 void assignment(void)
 {
-    int bit7 = BitValue(7);
-    int bit15 = BitValue(15);
-    int bit23 = BitValue(23);
-    int bit31 = BitValue(31);
+	unsigned int x = 1;
 
-    printf("7번째 비트만 1인 값: %08X %d\n", bit7, bit7);
-
-    printf("15번째 비트만 1인 값: %08X %d\n", bit15, bit15);
-
-    printf("23번째 비트만 1인 값: %08X %d\n", bit23, bit23);
-
-    printf("31번째 비트만 1인 값: %08X %d\n", bit31, bit31);
-
-    return 0;
+	x = x << 7;
+	printf("7번 비트만 1인 값: %08x %d\n", x, x);
+	x = x << 8;
+	printf("15번 비트만 1인 값: %08x %d\n", x, x);
+	x = x << 8;
+	printf("23번 비트만 1인 값: %08x %d\n", x, x);
+	x = x << 8;
+	printf("31번 비트만 1인 값: %08x %d", x, x);
 }
 int main(void)
 {

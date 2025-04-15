@@ -5,7 +5,7 @@
 
  * 작성자: 구가인
 
- * 날짜: 2025.4.6
+ * 날짜: 2025.4.15
 
  * 버전: v1.0
 
@@ -14,4 +14,24 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
-double 
+double density(double mass, double volume)
+{
+    return mass / volume;
+}
+void assignment0403(void)
+{
+    double mass = 0.0, volume = 0.0;
+	double result = 0.0;
+
+    printf("질량(g)? ");
+	scanf("%lf", &mass);
+    printf("부피(세제곱센티미터)? ");
+    scanf("%lf", &volume);
+	result = density(mass, volume);
+    printf("밀도: %.6lf\n", result);
+}
+int main(void)
+{
+	assignment0403();
+	return 0;
+}

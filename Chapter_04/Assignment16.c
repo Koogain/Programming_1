@@ -14,22 +14,27 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
-int truecolor(int r, int g, int b)
-{
-	return (r & 0xFF) | ((g & 0xFF) << 8) | ((b & 0xFF) << 16);
-}
 void assignment0416(void)
 {
-	unsigned int r = 0, g = 0, b = 0;
-	int color = 0;
+	int red, green, blue;
+	int value;
 	printf("red? ");
-	scanf("%d", &r);
+	scanf("%d", &red);
+	red %= 256;
+
 	printf("green? ");
-	scanf("%d", &g);
+	scanf("%d", &green);
+	green %= 256;
+
 	printf("blue? ");
-	scanf("%d", &b);
-	color = truecolor(r, g, b);
-	printf("RGB 트루 컬러: %06X\n", color);
+	scanf("%d", &blue);
+	blue %= 256;
+
+	value = blue * 256 * 256;
+	value += green * 256;
+	value += red;
+
+	printf("RGB 트루컬러: %06X", value);
 }
 int  main(void)
 {

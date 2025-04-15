@@ -37,7 +37,10 @@ void assignment0409(void)
 	s = s_time(second, minute, hour);
 	m = m_time(second, minute, hour);
 	h = h_time(second, minute, hour);
-	printf("재생시간은 %d시간 %d분 %d초입니다.\n", h, m, s);
+	printf("재생 시간은 ");
+	h == 0 ? printf("%d분 %d초입니다.\n", m, s) : printf("%d시간 %d분 %d초입니다.\n", h, m, s);
+	m == 0 ? printf("%시간 %d초입니다.\n", s) : printf("%d시간 %d분 %d초입니다.\n", h, m, s);
+	s == 0 ? printf("%d시간 %d분입니다.\n", h, m) : 0;
 }
 int main(void)
 {
