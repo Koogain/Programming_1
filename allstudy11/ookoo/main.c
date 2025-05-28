@@ -11,10 +11,16 @@ int main(void)
 }
 void testContact()
 {
-	Contact c1 = { "È«±æµ¿", "01022778029", MAN, 2025 };
-	Contact c2 = { "È«±æµ¿", "01022778029", MAN, 2025 };
-	Contact c3 = { "±è±æµ¿", "01022778029", MAN, 2025 };
+	Contact c1 = { "È«±æµ¿", "01012345678", MAN, 2025 };
+	Contact c2 = { "È«±æµ¿", "01012345678", MAN, 2025 };
+	Contact c3 = { "±è±æµ¿", "01099999999", MAN, 2025 };
 
 	printContact(c1);
+	printContactptr(&c2);
 
+	int result1 = isEqualContact(c1, c2);
+	int result2 = isEqualContactptr(&c2, &c3);
+
+	printf("c1°ú c2´Â %s\n", result1 ? "°°½À´Ï´Ù" : "´Ù¸¨´Ï´Ù");
+	printf("c2°ú c3´Â %s\n", result2 ? "°°½À´Ï´Ù" : "´Ù¸¨´Ï´Ù");
 }
