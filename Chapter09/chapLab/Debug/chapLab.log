@@ -1,0 +1,5 @@
+﻿  main.c
+C:\Users\User\source\repos\Chapter09\chapLab\main.c(8,9): warning C4013: 'testCpy'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\User\source\repos\Chapter09\chapLab\main.c(21,10): warning C4013: 'str_swap'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\User\source\repos\Chapter09\chapLab\main.c(52): warning C4716: 'tsetStrlen': 값을 반환해야 합니다.
+  chapLab.vcxproj -> C:\Users\User\source\repos\Chapter09\Debug\chapLab.exe
